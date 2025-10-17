@@ -5,7 +5,7 @@ Displays a user’s avatar, name, bio, current time (in milliseconds), social li
 
 ---
 
-### 🚀 Run Locally
+### Run Locally
 
 1. **Clone or download** this repo:
 
@@ -27,3 +27,4 @@ Displays a user’s avatar, name, bio, current time (in milliseconds), social li
 
 
    Visit [http://localhost:8000](http://localhost:8000)
+

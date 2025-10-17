@@ -10,7 +10,7 @@ Displays a user’s avatar, name, bio, current time (in milliseconds), social li
 1. **Clone or download** this repo:
 
    ```bash
-   git clone https://github.com/your-username/profile-card.git
+   git clone https://github.com/toluwaa-o/card.git
    cd profile-card
    ```
 
@@ -24,5 +24,6 @@ Displays a user’s avatar, name, bio, current time (in milliseconds), social li
    ```bash
    python -m http.server 8000
    ```
+
 
    Visit [http://localhost:8000](http://localhost:8000)

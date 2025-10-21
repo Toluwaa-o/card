@@ -15,18 +15,24 @@ body {
     color: var(--text-color);
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     min-height: 100vh;
     margin: 0;
     padding: 1rem;
 }
 
-article[data-testid="test-profile-card"] {
+main,
+article {
     background: var(--card-bg);
     border-radius: var(--border-radius);
     box-shadow: var(--shadow);
-    max-width: 640px;
+    max-width: 700px;
     width: 100%;
+    padding: 2rem;
+    margin: 1rem auto;
+}
+
+article[data-testid="test-profile-card"] {
     display: flex;
     flex-direction: column;
     overflow: hidden;
@@ -61,6 +67,13 @@ img[data-testid="test-user-avatar"]:hover {
 header {
     text-align: center;
     padding: 0.5rem 1rem;
+}
+
+h1,
+h2,
+h3 {
+    color: var(--accent);
+    margin-top: 0;
 }
 
 h2[data-testid="test-user-name"] {
@@ -128,6 +141,75 @@ ul {
     line-height: 1.6;
 }
 
+.contact-card {
+    padding: 2rem;
+}
+
+.form-group {
+    margin-bottom: 1.25rem;
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-weight: 500;
+    margin-bottom: 0.4rem;
+}
+
+input,
+textarea,
+button {
+    font: inherit;
+    padding: 0.65rem;
+    border-radius: 8px;
+    border: 1px solid #cbd5e1;
+    background-color: #f9fafb;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+input:focus,
+textarea:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 2px var(--accent-light);
+    outline: none;
+}
+
+button {
+    background: var(--accent);
+    color: #fff;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background: #1d4ed8;
+    transform: translateY(-1px);
+}
+
+.error {
+    color: #dc2626;
+    font-size: 0.85rem;
+    margin-top: 0.25rem;
+}
+
+.success {
+    color: #16a34a;
+    font-weight: 500;
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.about-page section {
+    margin-bottom: 1.5rem;
+}
+
+.about-page ul {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+}
+
 @media (min-width: 640px) {
     article[data-testid="test-profile-card"] {
         flex-direction: row;
@@ -154,5 +236,17 @@ ul {
 
     nav[data-testid="test-user-social-links"] {
         justify-content: flex-start;
+    }
+}
+
+@media (max-width: 600px) {
+    main {
+        padding: 1.5rem;
+    }
+
+    input,
+    textarea,
+    button {
+        font-size: 1rem;
     }
 }

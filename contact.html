@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <main>
+        <article class="contact-card">
+            <h1>Contact Us</h1>
+            <form id="contactForm" novalidate>
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" data-testid="test-contact-name" aria-describedby="error-name"
+                        required />
+                    <small id="error-name" data-testid="test-contact-error-name" class="error"></small>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" data-testid="test-contact-email" aria-describedby="error-email"
+                        required />
+                    <small id="error-email" data-testid="test-contact-error-email" class="error"></small>
+                </div>
+
+                <div class="form-group">
+                    <label for="subject">Subject</label>
+                    <input type="text" id="subject" data-testid="test-contact-subject" aria-describedby="error-subject"
+                        required />
+                    <small id="error-subject" data-testid="test-contact-error-subject" class="error"></small>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" rows="5" data-testid="test-contact-message" aria-describedby="error-message"
+                        required></textarea>
+                    <small id="error-message" data-testid="test-contact-error-message" class="error"></small>
+                </div>
+
+                <button type="submit" data-testid="test-contact-submit">Send Message</button>
+            </form>
+
+            <p id="successMsg" data-testid="test-contact-success" class="success" hidden>
+                ✅ Your message has been sent successfully!
+            </p>
+        </article>
+
+        <nav class="page-links">
+            <a href="index.html">Back to Profile</a>
+            <a href="about.html">About</a>
+        </nav>
+    </main>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
